@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Text font';
+    font-size: large;
+    color: green;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    font-family: 'skill font';
+    color: green;
+}
+
+@font-face {
+    font-family: 'ARCADECLASSIC';
+    src: url('/WEB/fonts/ARCADECLASSIC.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'GTA font';
+    src: url('/WEB/fonts/pricedown bl.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Minecraft font';
+    src: url('/WEB/fonts/Minecraft Evenings.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'PacMan font';
+    src: url('/WEB/fonts/PAC-FONT.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Phreak font';
+    src: url('/WEB/fonts/VIDEOPHREAK.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Text font';
+    src: url('/WEB/fonts/webpixel bitmap_bold-italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'skill font';
+    src: url('/WEB/fonts/Pines Country Font by Sutujuh.otf') format('opentype');
+}
+
+body {
+    height: 100vh;
+    font-family: 'PacMan font', sans-serif;
+    background-color: #121212;
+    line-height: 1.6;
+    position: relative;
+    overflow-y: auto;
+}
+
+.container {
+    text-align: center;
+}
+
+.changing-text {
+    font-size: 64px;
+    font-weight: bold;
+    color: #227B94;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+header {
+    background-color: transparent;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    color: #227B94;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #78B7D0;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.project-item {
+    background-color: #78B7D0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    color: #227B94;
+}
+
+footer {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    color: #bbbbbb;
+}
+.nintendo-3ds {
+    width: 200px;
+    height: 150px;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Needed for absolute positioning of lid and screen */
+}
+
+.screen {
+    position: absolute;
+    width: 40%; /* Reduced width */
+    height: 40%; /* Reduced height */
+    background-color: black;
+    border-radius: 10px;
+    transform: translateZ(20px);
+}
+
+.lid {
+    position: absolute;
+    top: 45px; /* Adjusted top position */
+    left: 62px; /* Adjusted left position */
+    width: 40%; /* Match screen size */
+    height: 40%; /* Match screen size */
+    background-color:black;
+    border-radius: 10px 10px 0 0;
+    transform-origin: 50% 0%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.nintendo-3ds:hover .lid {
+    transform: rotateX(90deg);
+}
+
+.nintendo-3ds:not(:hover) .lid {
+    transform: rotateX(0deg);
+}
